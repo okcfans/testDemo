@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons right>
+      <button ion-button (click)="cancel()">
+        <img src="assets/imgs/pre-sale-wind-control/close@2x.png" class="img-20">
+      </button>
+    </ion-buttons>
+    <ion-title text-left class="modal-title">{{title}}</ion-title>
+  </ion-navbar>
+  <ion-searchbar class="searchbar-ios-with-btn" placeholder="输入名称"
+                 (ionInput)="searchItem()"
+                 (ionClear)="searchItem()"
+                 [(ngModel)]="searchText"></ion-searchbar>
+</ion-header>
+
+<ion-content>
+
+  <page-null [err]="errMsg" *ngIf="errMsg"></page-null>
+  <ion-list >
+      <ion-item *ngFor="let employee of employeeList" (click)="select(employee)"
+                no-margin no-padding class="list-item color-gray">
+        <span class="client">{{employee.LastName+employee.FirstName}}</span>
+      </ion-item>
+  </ion-list>
+</ion-content>

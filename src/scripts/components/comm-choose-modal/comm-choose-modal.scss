@@ -1,0 +1,31 @@
+comm-choose-modal {
+  /* 下拉刷新 去掉下边框*/
+  /*.has-refresher > .scroll-content {
+    border-top: 0px !important;
+  }*/
+  ion-header {
+    ion-navbar {
+      border-bottom: 1px solid #eee;
+    }
+    ion-searchbar.searchbar-ios {
+      width: 100% !important;
+    }
+  }
+
+  .client {
+    padding-left: 30px;
+    background: url('../assets/imgs/receipt/client@3x.png') left top no-repeat;
+    background-size: 20px 16px;
+  }
+  .dial {
+    padding-right: 30px;
+    background: url('../assets/imgs/receipt/dial@3x.png') right top no-repeat;
+    background-size: 14px 14px;
+  }
+
+  ion-content {
+    ion-list {
+      margin-top: 10px;
+    }
+  }
+}

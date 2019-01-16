@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary">取消</span>
+      </button>
+    </ion-buttons>
+    <ion-title>选择{{typeText}}</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="certain()">
+        <span ion-text color="primary">确定</span>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-searchbar placeholder="输入搜索条件" (ionInput)="searchItem()"
+                 (ionClear)="searchItem()" [(ngModel)]="searchText"></ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="type === 'client'" [(ngModel)]="selectedClientId" radio-group no-margin>
+    <ion-item *ngFor="let item of clientList">
+      <ion-label>{{item?.Name}}</ion-label>
+      <ion-radio [value]="item?.AccountID"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="type === 'employee'" [(ngModel)]="selectedEmployee" radio-group no-margin>
+    <ion-list-header>
+      <ion-row>
+        <ion-col>ID</ion-col>
+        <ion-col>姓名</ion-col>
+      </ion-row>
+    </ion-list-header>
+    <ion-item *ngFor="let item of employeeList">
+      <ion-label>
+        <ion-row>
+          <ion-col>{{item.EmployeeID}}</ion-col>
+          <ion-col>{{item.LastName + item.FirstName}}</ion-col>
+        </ion-row>
+      </ion-label>
+      <ion-radio [value]="item"></ion-radio>
+    </ion-item>
+  </ion-list>
+</ion-content>

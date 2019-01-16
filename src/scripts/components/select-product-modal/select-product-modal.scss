@@ -1,0 +1,10 @@
+select-product-modal {
+ ion-content {
+   ion-slides {
+     .swiper-container {
+       height: auto !important;
+       overflow: auto !important;
+     }
+   }
+ }
+}

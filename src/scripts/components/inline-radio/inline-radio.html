@@ -1,0 +1,4 @@
+<div col-6 class="radio-item" *ngFor="let item of items, let i = index" (click)="changeOption(i)">
+  <ion-icon name="radio-button-off" [ngClass]="{'ion-ios-radio-button-on color-theme': item.check, 'ion-ios-radio-button-off': !item.check}"></ion-icon>
+  <ion-label>{{item.text}}</ion-label>
+</div>

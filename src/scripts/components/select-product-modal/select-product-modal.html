@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary">取消</span>
+      </button>
+    </ion-buttons>
+    <ion-title>请选择</ion-title>
+    <ion-buttons end>
+      <button ion-button *ngIf="selected.length > 0" (click)="prevStep(selected.length)">
+        <span ion-text color="primary">上一步</span>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-searchbar *ngIf="slides.getActiveIndex() === 0"
+                 [placeholder]="'类型'"
+                 (keyup.enter)="searchMaterial()"
+                 (ionClear)="searchClear()" (ionInput)="searchClear()"
+                 [(ngModel)]="searchMaterialText"></ion-searchbar>
+  <ion-searchbar *ngIf="slides.getActiveIndex() === 1"
+                 [placeholder]="'品牌'"
+                 (keyup.enter)="searchBrand()"
+                 (ionClear)="searchClear()" (ionInput)="searchClear()"
+                 [(ngModel)]="searchBrandText"></ion-searchbar>
+  <ion-searchbar *ngIf="slides.getActiveIndex() === 2"
+                 [placeholder]="'机型'"
+                 (keyup.enter)="searchProduct()"
+                 (ionClear)="searchClear()" (ionInput)="searchClear()"
+                 [(ngModel)]="searchProductText"></ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides #productSlides>
+    <ion-slide>
+      <ion-list>
+        <ion-item *ngIf="material.length === 0">无</ion-item>
+        <button ion-item *ngFor="let item of material" (click)="selectProductMaterial(item)">
+          <span *ngFor="let i of item?.ProductCategoryHierarchyDescription">{{i?.Description}}</span>
+        </button>
+      </ion-list>
+    </ion-slide>
+    <ion-slide>
+      <ion-list>
+        <ion-item *ngIf="brand.length === 0">无</ion-item>
+        <button ion-item *ngFor="let item of brand" (click)="selectProductBrand(item)">
+          <span *ngFor="let i of item?.ProductCategoryHierarchyDescription">{{i?.Description}}</span>
+        </button>
+      </ion-list>
+    </ion-slide>
+    <ion-slide>
+      <ion-list>
+        <ion-item *ngIf="product.length === 0">无</ion-item>
+        <button ion-item *ngFor="let item of product" (click)="selectProduct(item)">{{item?.Description}}</button>
+      </ion-list>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

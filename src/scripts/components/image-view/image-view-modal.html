@@ -1,0 +1,14 @@
+<ion-content>
+  <ion-slides pager (click)="choseImage()" *ngIf="!isBase64">
+    <ion-slide *ngFor="let item of imgList">
+      <img [src]="item[imgUrl]" class="bigToSmall">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-slides pager (click)="choseImage()" *ngIf="isBase64">
+    <ion-slide *ngFor="let item of imgList">
+      <img [src]="item[imgUrl].substring(0, 22) === imgBase64Url ? item[imgUrl] : imgBase64Url + item[imgUrl]"
+           class="bigToSmall">
+    </ion-slide>
+  </ion-slides>
+</ion-content>

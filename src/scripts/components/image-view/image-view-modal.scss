@@ -1,0 +1,13 @@
+image-view-modal {
+  ion-slides {
+    .swiper-container {
+      overflow: scroll !important;
+    }
+  }
+  .bigToSmall{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

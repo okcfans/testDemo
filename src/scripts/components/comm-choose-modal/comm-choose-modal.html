@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons right>
+      <button ion-button (click)="cancel()">
+        <img src="assets/imgs/pre-sale-wind-control/close@2x.png" class="img-20">
+      </button>
+    </ion-buttons>
+    <ion-title text-left class="modal-title">{{title}}</ion-title>
+  </ion-navbar>
+  <ion-searchbar class="searchbar-ios-with-btn" placeholder="输入名称"
+                 (keyup.enter)="searchData()"
+                 (ionClear)="searchClear()"
+                 (ionChange)="searchChange($event)"
+                 [(ngModel)]="searchText"></ion-searchbar>
+</ion-header>
+
+<ion-content>
+
+  <page-null [err]="errMsg" *ngIf="errMsg"></page-null>
+  <!--  可新增，修改-->
+  <ion-list *ngIf="flag === 'approval'">
+    <ion-item *ngFor="let approval of dataList" (click)="select(approval)"
+              no-margin no-padding class="list-item color-gray">
+      <span hidden>{{approval.EmployeeID}}</span>
+      <span class="client">{{approval.LastName + approval.FirstName}}</span>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="flag === 'customer'">
+    <ion-item *ngFor="let customer of dataList" (click)="select(customer)"
+              no-margin no-padding class="list-item color-gray">
+      <span hidden>{{customer.AccountID}}</span>
+      <span class="client">{{customer.AccountName}}</span>
+      <span class="padding-L10" float-right>{{customer.Phone}}</span>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="flag === 'car'">
+    <ion-item *ngFor="let car of dataList" (click)="select(car)"
+              no-margin no-padding class="list-item color-gray">
+      <ion-row>
+        <ion-col>
+          <ion-row><ion-col class="font-14 color-darkgrey">车辆编码：{{car.vehicleID}}</ion-col></ion-row>
+          <ion-row><ion-col class="font-14 color-darkgrey">车辆车牌：{{car.vehicleNumber}}</ion-col></ion-row>
+        </ion-col>
+        <ion-col col-2 class="flex-center-ver padding-L30">
+          <img src="assets/imgs/service-management/right@3x.png" class="img-24"/>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngIf="flag === 'secondBrand'">
+    <ion-item *ngFor="let second of dataList" (click)="select(second)"
+              no-margin no-padding class="list-item color-gray">
+      <ion-row>
+        <ion-col>
+          <ion-row><ion-col class="font-14 color-darkgrey">机型：{{second.Description}}</ion-col></ion-row>
+          <ion-row><ion-col class="font-14 color-darkgrey">品牌：{{second.BranName}}</ion-col></ion-row>
+        </ion-col>
+        <ion-col col-2 class="flex-center-ver padding-L30">
+          <img src="assets/imgs/service-management/right@3x.png" class="img-24"/>
+        </ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+
+  <!-- 上拉加载更多 -->
+  <ion-infinite-scroll (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingText="正在加载..."></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

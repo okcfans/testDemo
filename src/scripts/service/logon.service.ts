@@ -2,7 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Platform } from 'ionic-angular';
 import { Observable } from "rxjs/Observable";
-
+import { ENV } from '@app/env';
+import { InterfaceAddMap } from '../constant/interface-address-map';
+import { LocalStorage } from "./local-storage.service";
+import { LocalStorageKeys } from "../constant/constant";
+import { PushService } from "./push.service";
+import { VersionService } from "./version.service";
+import { LoadingService } from "./loading.service";
 
 declare let sap;
 @Injectable()

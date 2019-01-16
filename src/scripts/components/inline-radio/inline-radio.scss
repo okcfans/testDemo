@@ -1,0 +1,19 @@
+inline-radio {
+  padding: 0 !important;
+  .radio-item {
+    display: inline-block;
+    padding: 0 !important;
+    ion-icon,
+    ion-label {
+      width: 16px;
+      height: 16px;
+    }
+    ion-label {
+      display: inline-block;
+      margin: 0 !important;
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+}

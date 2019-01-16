@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar >
+    <ion-buttons left (click)="back()">
+      <button ion-button icon-only>
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>地址选择</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item no-padding class="list-item" *ngFor="let item of locationList"  (click)="choseLocation(item?.name)">
+      {{item?.name}}
+    </ion-item>
+  </ion-list>
+</ion-content>
+
