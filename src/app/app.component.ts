@@ -6,8 +6,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LocationService } from '../scripts/service/location.service';
 import { PushService } from '../scripts/service/push.service';
 import { LogonService } from '../scripts/service/logon.service';
-
-
 import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
