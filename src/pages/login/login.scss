@@ -1,0 +1,57 @@
+page-login {
+  ion-content {
+    background: url('../assets/imgs/curves@3x.png') center bottom no-repeat;
+    background-size: contain;
+    ion-row {
+      img {
+        width: 210.9px;
+        height: 35.8px;
+        margin: 70px auto;
+      }
+    }
+    ion-list {
+      ion-item {
+        border: none !important;
+        background: transparent !important;
+        .item-inner {
+          margin: 0 50px !important;
+          padding: 0 1px !important;
+          border-bottom: .5px solid rgba(14, 110, 184, .9) !important;
+        }
+        ion-label {
+          img {
+            width: 17px;
+            height: 19px;
+          }
+        }
+        &.check-item {
+          .item-inner {
+            border-bottom: none !important;
+          }
+          ion-label {
+            margin-right: 0 !important;
+            ion-checkbox {
+              margin: 0 8px 0 0 !important;
+            }
+            span {
+              color: color($colors, primary);
+            }
+          }
+        }
+        &:last-child {
+          margin-top: 20px;
+          .item-inner {
+            border-bottom: none !important;
+          }
+          ion-label {
+            margin: 0 !important;
+            button {
+              margin: 0 !important;
+              height: 44px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

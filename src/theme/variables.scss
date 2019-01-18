@@ -34,25 +34,139 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
+  primary:    #0E6EB8,
+  secondary:  #48D2A0,
+  danger:     #F96F68,
   light:      #f4f4f4,
-  dark:       #222
+  gray:       #6D7A80,
+  secondgray: #9B9B9B,
+  darkgray:   #4A4A4A,
+  dark:       #222,
+  borderColor: #E7E7E7,
+  white:      #FFFFFF,
+  doing:      #F5A623,
+  secondblue: #1F8CEB
 );
+.color-theme {
+  color: color($colors, primary) !important;
+}
+.color-green {
+  color: color($colors, secondary) !important;
+}
+.color-red {
+  color: color($colors, danger) !important;
+}
+.color-gray {
+  color: color($colors, gray) !important;
+}
+.color-secondgray {
+  color: color($colors, secondgray) !important;
+}
+.color-darkgrey {
+  color: color($colors, darkgray) !important;
+}
+.color-danger {
+  color: color($colors, danger) !important;
+}
+.color-doing {
+  color: color($colors, doing) !important;
+}
+.color-white{
+  color:color($colors, white) !important;
+}
+.color-secondary {
+  color: color($colors, secondary) !important;
+}
+.color-secondblue {
+  color: color($colors, secondblue) !important;
+}
+.bg-fff {
+  background-color: color($colors, white) !important;
+}
+.bg-theme,
+.bg-primary{
+  background-color: color($colors, primary) !important;
+}
+.bg-green{
+  background-color: color($colors, secondary) !important;
+}
+.bg-DB{
+  background-color: #DBDBDB !important;
+}
+.font-10 {
+  font-size: 1.0rem !important;
+}
+.font-11 {
+  font-size: 1.1rem !important;
+}
+.font-12 {
+  font-size: 1.2rem !important;
+}
+.font-13{
+  font-size: 1.3rem !important;
+}
+.font-14 {
+  font-size: 1.4rem !important;
+}
+.font-16 {
+  font-size: 1.6rem !important;
+}
+.font-17 {
+  font-size: 1.7rem !important;
+}
+.font-18 {
+  font-size: 1.8rem !important;
+}
+.font-weight{
+  font-weight: bold;
+}
 
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
-
+// 标题处理
+$toolbar-ios-background: #fff;
+// $toolbar-ios-button-font-size: 1.6rem;
+$toolbar-ios-title-text-color: color($colors, darkgray);
+$toolbar-ios-title-font-size: 1.6rem;
+$toolbar-ios-title-font-weight: 400;
+// 列表处理
+$list-ios-margin-bottom: 10px;
+$item-ios-body-text-font-size: 1.4rem;
+$list-background-color: #fff;
+$list-border-color: #E9E9E9;
+// padding
+$content-padding: 10px;
+$expense-day-list-padding: 15px;
+// content
+$background-color: #FAFAFA;
+// 按钮
+$button-ios-font-size: 1.4rem;
+//上拉菜单
+$action-sheet-ios-button-font-size: 1.6rem; //字体大小
+$action-sheet-ios-button-padding:15px;
+$action-sheet-ios-button-min-height:4rem;
+$action-sheet-ios-button-cancel-font-weight:400;
+//弹出框
+$alert-ios-button-font-size: 1.5rem;
+$alert-ios-button-main-font-weight:400;
+$alert-ios-title-font-size: 1.6rem;
+$alert-ios-title-font-weight:400;
+$alert-ios-message-padding-bottom:16px;
+$alert-ios-message-font-size:1.4rem;
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
+/*
+$toolbar-md-background: #fff;
+$toolbar-md-button-color: color($colors, primary);
+.toolbar-title-md  {
+  text-align: center;
+}
+*/
 
 
 
@@ -86,3 +200,5 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+@import "common";
+

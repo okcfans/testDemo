@@ -1,0 +1,535 @@
+/* 项目的公共样式 */
+
+/*********header底部边框设置-开始***********/
+.toolbar-background.toolbar-background-ios {
+  border-color: #e7e7e7 !important;
+  border-style: solid !important;
+}
+
+/*********header底部边框设置-结束***********/
+
+/* 模态框 */
+.wf-modal {
+  ion-backdrop {
+    visibility: visible !important;
+  }
+  .modal-wrapper {
+    z-index: 10;
+    height: 50%;
+    contain: strict;
+    position: absolute;
+    bottom: 0;
+    top: 50%;
+    left: 0;
+    right: 0;
+  }
+}
+
+/* ionGalleryModal */
+gallery-modal {
+  ion-content {
+    background-color: #fff !important;
+    .close-button {
+      top: 10px !important;
+      color: #000;
+    }
+  }
+}
+
+/***** 蓝色头部开始 *******/
+.theme-header {
+  background-color: color($colors, primary) !important;
+  .toolbar-background-ios {
+    background-color: color($colors, primary);
+  }
+  .bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default {
+    color: color($colors, white);
+  }
+  .toolbar-title-ios {
+    color: color($colors, white);
+  }
+}
+
+/***** 蓝色头部结束 *******/
+
+/* 顶部标题按钮 - 开始 */
+button.back-button {
+  min-width: .9em;
+  padding: 0 !important;
+  margin-left: 11px !important;
+  ion-icon {
+    min-width: auto !important;
+    font-size: 1.8em;
+    line-height: .67;
+    pointer-events: none;
+  }
+}
+
+ion-buttons {
+  &.bar-buttons-ios[left] {
+    margin-left: 11px !important;
+  }
+  &.bar-buttons-ios[right] {
+    margin-right: 11px !important;
+  }
+  button {
+    padding-right: 0 !important;
+  }
+}
+
+/* 顶部标题按钮 - 结束 */
+
+/* 费用清单列表项 - 开始 */
+.list-item {
+  .item-inner {
+    padding: 0 $expense-day-list-padding !important;
+    ion-label.label {
+      margin-right: 0 !important;
+    }
+    ion-multi-picker {
+      padding-right: 0 !important;
+    }
+  }
+}
+/* 费用清单列表项 - 结束 */
+
+/* 费用明细分隔 - 开始 */
+.item-divider {
+  font-weight:bold;
+  height: 45px;
+  padding-left: 0 !important;
+  background: transparent !important;
+  ion-label {
+    padding-left: 11px;
+    margin-right: 15px !important;
+    border-left: 4px solid color($colors, secondblue);
+    button {
+      width: 15px !important;
+      height: 15px !important;
+      margin: 0;
+      &:first-child {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+/* 费用明细分隔 - 结束 */
+
+/* Text样式 - 开始 */
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+/* Text样式 - 结束 */
+
+/* Multi Picker 样式 - 开始 */
+ion-picker-cmp {
+  .picker-toolbar {
+    .picker-toolbar-multi-picker-cancel {
+      flex: 0;
+    }
+  }
+  .picker-opts {
+    button {
+      font-size: 12px !important;
+    }
+  }
+}
+/* Multi Picker 样式 - 结束 */
+
+/*******************tab标题开始**********************/
+.tabs-title {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+}
+
+.tab-title {
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+  color: color($colors, gray);
+  letter-spacing: 0;
+  text-align: center;
+  &.active {
+    color: color($colors, primary);
+    border-bottom: 2px solid color($colors, primary);
+  }
+}
+
+.tab-split{
+  position: absolute;
+  top: 5px;
+  height: 30px;
+  border-right: 1px solid #eee;
+}
+/*******************tab标题结束**********************/
+
+/*******蓝色按钮样式-开始*********/
+.blue-button-style{
+  background: #0E6EB8 !important;
+  border-radius: 4px !important;
+  height: 29px !important;
+  padding-top:5px !important;
+}
+
+/*******蓝色按钮样式-结束*********/
+
+/*******图片大小样式-开始*********/
+.img-20{
+  height: 20px;
+  width: 20px;
+}
+.img-24 {
+  width: 24px !important;
+  height: 24px !important;
+}
+.img-30{
+  height: 30px;
+  width: 30px;
+}
+.img-32 {
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.img-16{
+  width: 16px !important;
+  height: 16px !important;
+}
+.img-15{
+  width: 15px !important;
+  height: 15px !important;
+}
+.img-14 {
+  width: 14px !important;
+  height: 14px !important;
+}
+.img-10{
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.img-70{
+  width: 70px !important;
+  height: 70px !important;
+}
+
+.img-60{
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.img-4{
+  width: 4px !important;
+  height: 14px !important;
+}
+
+.img-6{
+  height:6px;
+  width:6px;
+}
+
+/* 图片上传方框样式*/
+.img-zdy{
+  width: 60px !important;
+  height: 60px !important;
+  border: 1px #E9E9E9 solid !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+/*******图片大小样式-结束*********/
+
+/*******spinner大小样式-开始*********/
+.spiner18{
+  width: 18px;
+  height:18px;
+}
+/*******spinner大小样式-结束*********/
+
+/*******搜索相关样式-开始*********/
+//搜索框样式
+.searchbar-ios {
+  background: #fff !important;
+  border-bottom: none !important;
+  .searchbar-input {
+    background-color: #fafafa !important;
+    border: 1px solid #E9E9E9;
+    height: 30px !important;
+  }
+}
+.searchbar-ios-with-btn {
+  padding: 10px 15px !important;
+  width: 92%;
+}
+//高级搜索按钮样式
+.search-btn-position {
+  margin-top: -35px;
+  margin-right: 10px;
+}
+/*******搜索相关样式-结束*********/
+
+/*******缩略图样式,写法如下**
+<ion-col class="flex-center-hor" col-3>
+        <div class="border-tblr sy-thumbnail flex-center-ver">
+          <img src="assets/imgs/manDefault.jpg">
+        </div>
+</ion-col>
+***********/
+.sy-thumbnail{
+  height:70px;
+  width: 70px;
+  img{
+    max-height: 100%;
+    width: 100%;
+  }
+  .delete-img{
+    width: 20px;
+    position: absolute;
+    right:0;
+    top:-5px;
+  }
+}
+.delete-img{
+  width: 20px;
+  position: absolute;
+  right:0;
+  top:-5px;
+}
+/*******缩略图样式结束*************/
+
+/*******服务模块锯齿型头样式*******/
+.sector{
+  padding: 14px 0;
+  img{
+    height: 16px;
+    width: 4px;
+  }
+  .sector-name{
+    margin-left: 10px;
+    vertical-align: top;
+  }
+}
+/*******服务模块锯齿型头样式结束*******/
+
+/*******border相关样式-开始*********/
+.border-bottom {
+  border-bottom: 1px solid #EEEEEE !important;
+}
+.border-top {
+  border-top: 1px solid #EEEEEE !important;
+}
+.border-right {
+  border-right: 1px solid #EEEEEE !important;
+}
+.border-doing {
+  border: 1px #F5A623 solid !important;
+}
+.border-tblr {
+  border: 1px #E0E0E0 solid !important;
+}
+
+.border-radius{
+  border-radius: 3px;
+}
+/*******border相关样式-结束*********/
+
+/*******padding、margin相关样式-开始*********/
+.noPaddingLR {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.noPaddingTP {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.padding-L0{
+  padding-left: 0 !important;
+}
+.padding-T10 {
+  padding-top: 10px !important;
+}
+.padding-T25{
+  padding-top: 25px !important;
+}
+.padding-L5 {
+  padding-left: 5px !important;
+}
+.padding-L15 {
+  padding-left: 15px !important;
+}
+.padding-B10 {
+  padding-bottom: 10px !important;
+}
+.padding-TB15{
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+.padding-10{
+  padding:10px !important;
+}
+.padding-5{
+  padding:5px;
+}
+.no-padding{
+  padding: 0 !important;
+}
+.padding-TB {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+.padding-L20 {
+  padding-left: 20px !important;
+}
+.padding-L30{
+  padding-left: 30px !important;
+}
+.padding-L35{
+  padding-left: 35px !important;
+}
+.padding-R0{
+  padding-right: 0px !important;
+}
+.padding-R10{
+  padding-right: 10px !important;
+}
+.padding-B5{
+  padding-bottom: 5px !important;
+}
+.padding-T5{
+  padding-top: 5px !important;
+}
+.padding-L10{
+  padding-left: 10px !important;
+}
+.margin-10{
+  margin: 10px !important;
+}
+.margin-23 {
+  margin: 23px !important;
+}
+.margin-40 {
+  margin: 40px !important;
+}
+.margin-T5{
+  margin-top: 5px !important;
+}
+.margin-T10{
+  margin-top: 10px !important;
+}
+.margin-b10 {
+  margin-bottom: 10px !important;
+}
+.margin-L15{
+  margin-left: 15px !important;
+}
+.margin-L20{
+  margin-left: 20px !important;
+}
+.margin-B0{
+  margin-bottom: 0px !important;
+}
+.margin-R0{
+  margin-right: 0px !important;
+}
+.margin-TB10{
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+.margin-TB5{
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+.margin-L5{
+  margin-left:5px !important;
+}
+.margin-R10{
+  margin-right:10px !important;
+}
+.margin-R20{
+  margin-right:20px !important;
+}
+.margin-R30{
+  margin-right:30px !important;
+}
+.margin-R35{
+  margin-right:35px !important;
+}
+.margin-L10{
+  margin-left:10px !important;
+}
+
+.margin-TB5{
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+.padding-L10{
+padding-left: 10px !important;
+}
+/*******padding、margin相关样式-结束*********/
+
+/**********内容垂直居中**************/
+.flex-center-ver{
+  display: flex;
+  align-items: center;
+}
+/***********flex内容水平居中***************/
+.flex-center-hor{
+  display: flex;
+  justify-content: center;
+}
+
+/**********对齐方式**************/
+.align-right{
+  text-align: right;
+}
+.align-center{
+  text-align: center;
+}
+.align-left{
+  text-align: left;
+}
+/**********对齐方式*************/
+
+
+/**********input、textarea等只读样式***********/
+.readonly [readonly]{
+  @extend .color-gray;
+}
+
+/*更新弹出框*/
+.update-alert{
+  .alert-head{
+    margin-bottom: 5px;
+    color: color($colors, primary);
+  }
+}
+
+/*ios底部popver弹出框高度修改*/
+.ios-popver-select{
+  .popover-ios .popover-content{
+    max-height: 50%;
+  }
+
+}
+
+// 隐形
+.invisibility {
+  visibility: hidden !important;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+  .input-wrapper {
+    overflow: visible !important;
+  }
+}
+
